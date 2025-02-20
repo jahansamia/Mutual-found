@@ -135,11 +135,10 @@ This query retrieves the fund return and category return for a set of funds.  Th
 SELECT
     fund_symbol,
     fund_return_5years,
-    RANK() OVER (ORDER BY fund_return_5years DESC) AS fund_rank
+    category_return_5years
 FROM
-    mutual
-ORDER BY
-    fund_rank;
+   mutual
+WHERE fund_symbol IN ('AAAAX', 'AAAGX', 'ALAFX');
  ````   
 ![IMAGE]()
 
