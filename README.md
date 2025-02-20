@@ -15,13 +15,13 @@ Queries:
 ````
 SELECT
     fund_symbol,
-    fund_return_5years,
-    category_return_5years
+    year_to_date_return,
+    week52_high_low_change_perc
 FROM
-    mutual
+    mutual;
 ````
 
-![IMAGE](https://github.com/jahansamia/Mutual-found/blob/b66bb38572b7d2fdd3649968b4ce52a59938aae5/Azure-SQL-analysis/5%20YEARS%20RETURN.png)
+![IMAGE](https://github.com/jahansamia/Mutual-found/blob/80ea282f29bc13c883e43443d924390f421db333/Azure-SQL-analysis/52WEEKS.png)
 
 Year-to-Date Return vs. 52-Week High/Low Change Percentage: This query retrieves the year-to-date return and the 52-week high/low change percentage for each fund.  This data can be used to explore the relationship between recent performance and price volatility.
 
@@ -125,7 +125,7 @@ FROM
 ORDER BY
     fund_rank;
 ````
-![IMAGE]()
+![IMAGE](https://github.com/jahansamia/Mutual-found/blob/b66bb38572b7d2fdd3649968b4ce52a59938aae5/Azure-SQL-analysis/5%20YEARS%20RETURN.png)
 
 #### Performance Comparison for Bar Charts: 
 This query retrieves the fund return and category return for a set of funds.  This data can be used to compare the performance of individual funds against their category benchmarks.
