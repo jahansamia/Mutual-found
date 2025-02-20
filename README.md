@@ -75,7 +75,7 @@ FROM
 ORDER BY
     date;
 ````
-![IMAGE]()
+![IMAGE](https://github.com/jahansamia/Mutual-found/blob/db8d114381d82d7c137d7495372e24dde1efac49/Azure-SQL-analysis/RETURN%20VALUE.png)
 
 #### Time Series Data for Line Charts (Example): This query demonstrates how to structure data for a time series line chart.  It creates a common table expression (CTE) called HistoricalPerformance with sample date and return values. This is illustrative; you would replace this with actual data from your mutual table or a related historical performance table.
 
@@ -105,7 +105,7 @@ FROM (
 ) AS sector_allocations
 WHERE percentage > 0;
 ````
-![IMAGE]()
+![IMAGE](https://github.com/jahansamia/Mutual-found/blob/db8d114381d82d7c137d7495372e24dde1efac49/Azure-SQL-analysis/HEATHCARE.png)
 
 
 #### Time Series Data for Line Charts (Example): 
