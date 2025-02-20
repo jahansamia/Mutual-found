@@ -12,20 +12,23 @@ The SQL queries in this repository are intended to be used with a mutual fund da
 
 Queries:
 -- Example 1: Year-to-Date Return vs. 52-Week High/Low Change Percentage:
+````
 SELECT
     fund_symbol,
     fund_return_5years,
     category_return_5years
 FROM
     mutual
+````
 
-![IMAGE]()
+![IMAGE](https://github.com/jahansamia/Mutual-found/blob/b66bb38572b7d2fdd3649968b4ce52a59938aae5/Azure-SQL-analysis/5%20YEARS%20RETURN.png)
 
 Year-to-Date Return vs. 52-Week High/Low Change Percentage: This query retrieves the year-to-date return and the 52-week high/low change percentage for each fund.  This data can be used to explore the relationship between recent performance and price volatility.
 
 
 --Example 2: Fund Return Over Time: This would visualize the performance history of a fund. You'd likely want to "unpivot" or "melt" the yearly return columns into rows. This is database-specific and can be complex. Here's a general approach using a UNION ALL (most databases support this):
-    SELECT fund_symbol, '2020' AS year, fund_return_2020 FROM mutual
+````
+SELECT fund_symbol, '2020' AS year, fund_return_2020 FROM mutual
 UNION ALL
 SELECT fund_symbol, '2019' AS year, fund_return_2019 FROM mutual
 UNION ALL
@@ -33,6 +36,7 @@ SELECT fund_symbol, '2018' AS year, fund_return_2018 FROM mutual
 -- ... repeat for all years ...
 UNION ALL
 SELECT fund_symbol, '2000' AS year, fund_return_2000 FROM mutual
+````
 
 ![IMAGE]()
 
@@ -40,7 +44,7 @@ SELECT fund_symbol, '2000' AS year, fund_return_2000 FROM mutual
 
 
 --Example 3: Sector Allocation: This would visualize the distribution of investments across different sectors.
-
+````
 SELECT
     fund_symbol,
     fund_sector_financial_services,
@@ -51,10 +55,10 @@ SELECT
     fund_sector_utilities
 FROM
     mutual;
-
+````
 
  -- Time Series Data for Line Charts:
-
+````
 WITH HistoricalPerformance AS (
     SELECT
         '2023-01-01' AS date, 0.05 AS return_value UNION ALL
@@ -70,13 +74,13 @@ FROM
     HistoricalPerformance
 ORDER BY
     date;
-
+````
 ![IMAGE]()
 
 #### Time Series Data for Line Charts (Example): This query demonstrates how to structure data for a time series line chart.  It creates a common table expression (CTE) called HistoricalPerformance with sample date and return values. This is illustrative; you would replace this with actual data from your mutual table or a related historical performance table.
 
 ## --Example 4: Performance Comparison for Bar Charts:
-
+````
 SELECT
     fund_sector_financial_services,
     fund_sector_healthcare,
@@ -100,7 +104,7 @@ FROM (
     SELECT 'Utilities', fund_sector_utilities FROM mutual WHERE fund_symbol = 'AAAAX'
 ) AS sector_allocations
 WHERE percentage > 0;
-
+````
 ![IMAGE]()
 
 
@@ -111,7 +115,7 @@ This query retrieves the sector allocation for a specific fund (e.g., 'AAAAX'). 
 
 
 ## --Example 5: showing the rank position 10 years funds return
-
+````
 SELECT
     fund_symbol,
     fund_return_5years,
@@ -120,14 +124,14 @@ FROM
     mutual
 ORDER BY
     fund_rank;
-
-![IMAGE](https://github.com/jahansamia/Mutual-found/blob/b66bb38572b7d2fdd3649968b4ce52a59938aae5/Azure-SQL-analysis/5%20YEARS%20RETURN.png)
+````
+![IMAGE]()
 
 #### Performance Comparison for Bar Charts: 
 This query retrieves the fund return and category return for a set of funds.  This data can be used to compare the performance of individual funds against their category benchmarks.
 
 ## --Example 5: Fund Ranking showing the rank position 5 years funds return
-
+````
 SELECT
     fund_symbol,
     fund_return_5years,
@@ -136,7 +140,7 @@ FROM
     mutual
 ORDER BY
     fund_rank;
-    
+ ````   
 ![IMAGE]()
 
 
