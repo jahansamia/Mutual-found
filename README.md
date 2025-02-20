@@ -140,7 +140,7 @@ FROM
    mutual
 WHERE fund_symbol IN ('AAAAX', 'AAAGX', 'ALAFX');
  ````   
-![IMAGE]((https://github.com/jahansamia/Mutual-found/blob/b66bb38572b7d2fdd3649968b4ce52a59938aae5/Azure-SQL-analysis/5%20YEARS%20RETURN.png))
+![IMAGE](https://github.com/jahansamia/Mutual-found/blob/b66bb38572b7d2fdd3649968b4ce52a59938aae5/Azure-SQL-analysis/5%20YEARS%20RETURN.png)
 
 
 #### Fund Ranking:
