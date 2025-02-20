@@ -125,7 +125,7 @@ FROM
 ORDER BY
     fund_rank;
 ````
-![IMAGE](https://github.com/jahansamia/Mutual-found/blob/b66bb38572b7d2fdd3649968b4ce52a59938aae5/Azure-SQL-analysis/5%20YEARS%20RETURN.png)
+![IMAGE](https://github.com/jahansamia/Mutual-found/blob/09adc22d17c4c3b215886ff7b0daa1608c8911f0/Azure-SQL-analysis/FUND%20RANK.png)
 
 #### Performance Comparison for Bar Charts: 
 This query retrieves the fund return and category return for a set of funds.  This data can be used to compare the performance of individual funds against their category benchmarks.
@@ -140,7 +140,7 @@ FROM
    mutual
 WHERE fund_symbol IN ('AAAAX', 'AAAGX', 'ALAFX');
  ````   
-![IMAGE]()
+![IMAGE]((https://github.com/jahansamia/Mutual-found/blob/b66bb38572b7d2fdd3649968b4ce52a59938aae5/Azure-SQL-analysis/5%20YEARS%20RETURN.png))
 
 
 #### Fund Ranking:
