@@ -28,10 +28,11 @@ Synapse SQL was used to query and analyze the mutual fund data. This included ca
 ### Data Visualization (Power BI):
 Power BI has been used to visualize the results of the Synapse SQL analysis. This would involve creating interactive dashboards and reports to present the key insights.
 
-## Data-Source : ![link](https://www.kaggle.com/)
+## Data-Source :   
+[Data Source](https://www.kaggle.com/datasets/subhransuss/mutual-funds)
 ## Built-in Tools:
-* ![link](https://www.microsoft.com/en-us/power-platform/products/power-bi)
-* ![link](https://azure.microsoft.com)
+- [Azure](https://azure.microsoft.com/en-us/)
+- [Power BI](https://powerbi.microsoft.com/en-us/)
 
 This summarizes the SQL queries provided for analyzing mutual fund data. These queries are designed to extract and prepare data for visualization in a business intelligence tool like Power BI.  The queries cover several key aspects of fund analysis, including performance over time, sector allocation, and comparisons against category benchmarks.
 
