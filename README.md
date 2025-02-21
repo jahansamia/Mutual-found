@@ -7,25 +7,21 @@
 
 
 
-### Mutual-Fund-Data-Analysis: An Introduction :
+## Mutual-Fund-Data-Analysis: An Introduction :
 Mutual funds are a popular investment vehicle, pooling money from multiple investors to invest in a diversified portfolio of securities like stocks, bonds, or other assets.  Analyzing mutual fund data is crucial for investors, financial advisors, and researchers to make informed decisions.  This analysis can range from evaluating past performance to predicting future trends, assessing risk, and understanding the composition of a fund's holdings.
 
-### Objective:
+## Objective:
 The Mutualn Funds data is to provide a snapshot of key metrics for various mutual funds. This allows for comparison and analysis of different funds based on factors like performance (year-to-date, 5-year, 10-year returns), risk (standard deviation, beta), expenses (expense projections), holdings (sector allocation, top holdings), and other relevant data points (yield, Morningstar rating, ESG scores).  Ultimately, the goal is to empower investors and analysts to evaluate funds and make informed investment decisions.This data processing and analysis involves ingesting, storing, exploring, analyzing, visualizing, and reporting on mutual fund data to facilitate informed investment decisions.  Azure SQL and Power BI are the key tools in this process.
 
 ## Data-Processing-and-analysis-with-Visualization:
 downloaded the provided mutual fund data, cleaned it using Excel, and stored it in both a GitHub repository and an Azure Blob storage container.  Within Azure, I created a resource group containing a storage account, Data Factory, Databricks workspace, and Synapse Analytics workspace.  I then used these services to perform the following data pipeline:
-
-### Data Ingestion:
+#### Data Ingestion:
 The data from Azure Blob storage was ingested into the Synapse SQL pool.
-
-### Data Transformation:
+#### Data Transformation:
 While the data cleaned in Excel but further transformations in Databricks i used Spark before loading into Synapse.
-
-### Data Analysis (Synapse SQL):
+#### Data Analysis (Synapse SQL):
 Synapse SQL was used to query and analyze the mutual fund data. This included calculating performance metrics (returns, risk), comparing funds, analyzing sector allocation, and exploring ESG scores.
-
-### Data Visualization (Power BI):
+#### Data Visualization (Power BI):
 Power BI has been used to visualize the results of the Synapse SQL analysis. This would involve creating interactive dashboards and reports to present the key insights.
 
 ## Data-Source :   
@@ -41,9 +37,9 @@ Power BI has been used to visualize the results of the Synapse SQL analysis. Thi
 ### Analysis:
 This Power BI dashboard provides a comprehensive analysis of mutual fund data, offering key insights into performance, risk, and composition. The analysis leverages a dataset containing various metrics for a selection of mutual funds, including returns (year-to-date, 5-year, 10-year, and annual), risk measures (standard deviation, beta), expenses, sector allocation, ESG scores, and other relevant fund characteristics.
 ### Key Data Insights & Visualizations:
-####Fund Performance Analysis:
+#### Fund Performance Analysis:
 Performance is evaluated across multiple timeframes. Line and column charts showcase historical trends, allowing for quick identification of top performers and periods of growth or decline. 
-### Specific visualizations include:
+#### Specific visualizations include:
 * Sum of fund_return_5years by fund_return_2000 and fund_return_2001: A clustered column chart comparing the 5-year returns alongside returns from specific years (2000 and 2001). This helps visualize how funds performed during different market conditions.
 * Sum of fund_return_10years by fund_sector_healthcare: A pie chart breaking down 10-year returns by the healthcare sector allocation. This visualization helps understand the contribution of specific sectors to long-term returns.
 * Fund Return 2000 to Fund Return 2010: A line chart visualizing the yearly returns (2000-2010) for selected funds. This facilitates the analysis of performance consistency and trends over a decade
@@ -55,8 +51,9 @@ This project uses Azure cloud services and Power BI to analyze mutual fund data,
 
 This summarizes the SQL queries provided for analyzing mutual fund data, SQL queries in this repository are intended to be used with a mutual fund dataset.  They provide a foundation for building an interactive dashboard that can help investors and analysts understand fund performance, risk, and composition.
 
-Queries:
--- Example 1: Year-to-Date Return vs. 52-Week High/Low Change Percentage:
+### Queries:
+#### Example 1:
+Year-to-Date Return vs. 52-Week High/Low Change Percentage:
 ````
 SELECT
     fund_symbol,
@@ -71,7 +68,8 @@ FROM
 Year-to-Date Return vs. 52-Week High/Low Change Percentage: This query retrieves the year-to-date return and the 52-week high/low change percentage for each fund.  This data can be used to explore the relationship between recent performance and price volatility.
 
 
---Example 2: Fund Return Over Time: This would visualize the performance history of a fund. You'd likely want to "unpivot" or "melt" the yearly return columns into rows. This is database-specific and can be complex. Here's a general approach using a UNION ALL (most databases support this):
+#### Example 2:
+Fund Return Over Time: This would visualize the performance history of a fund. You'd likely want to "unpivot" or "melt" the yearly return columns into rows. This is database-specific and can be complex. Here's a general approach using a UNION ALL (most databases support this):
 ````
 SELECT fund_symbol, '2020' AS year, fund_return_2020 FROM mutual
 UNION ALL
@@ -85,10 +83,12 @@ SELECT fund_symbol, '2000' AS year, fund_return_2000 FROM mutual
 
 ![IMAGE]()
 
-#### Fund Return Over Time: This query transforms the yearly return data from columns into rows, making it suitable for time series analysis.  It uses a UNION ALL approach to combine data from different years.  This data can be used to visualize the historical performance of a fund over time.  Note: For larger datasets or more complex scenarios, consider using database-specific pivoting/unpivoting techniques for improved performance.
+#### Fund Return Over Time:
+This query transforms the yearly return data from columns into rows, making it suitable for time series analysis.  It uses a UNION ALL approach to combine data from different years.  This data can be used to visualize the historical performance of a fund over time.  Note: For larger datasets or more complex scenarios, consider using database-specific pivoting/unpivoting techniques for improved performance.
 
 
---Example 3: Sector Allocation: This would visualize the distribution of investments across different sectors.
+#### Example 3:
+Sector Allocation: This would visualize the distribution of investments across different sectors.
 ````
 SELECT
     fund_symbol,
@@ -122,9 +122,10 @@ ORDER BY
 ````
 ![IMAGE](https://github.com/jahansamia/Mutual-found/blob/db8d114381d82d7c137d7495372e24dde1efac49/Azure-SQL-analysis/RETURN%20VALUE.png)
 
-#### Time Series Data for Line Charts (Example): This query demonstrates how to structure data for a time series line chart.  It creates a common table expression (CTE) called HistoricalPerformance with sample date and return values. This is illustrative; you would replace this with actual data from your mutual table or a related historical performance table.
+#### Time Series Data for Line Charts (Example):
+This query demonstrates how to structure data for a time series line chart.  It creates a common table expression (CTE) called HistoricalPerformance with sample date and return values. This is illustrative; you would replace this with actual data from your mutual table or a related historical performance table.
 
-## --Example 4: Performance Comparison for Bar Charts:
+#### Example 4: Performance Comparison for Bar Charts:
 ````
 SELECT
     fund_sector_financial_services,
@@ -159,7 +160,7 @@ This query demonstrates how to structure data for a time series line chart.  It 
 This query retrieves the sector allocation for a specific fund (e.g., 'AAAAX').  It provides two versions: one that selects the sector percentages directly and another that normalizes the data into sector and percentage columns for easier charting.
 
 
-## --Example 5: showing the rank position 10 years funds return
+#### Example 5: showing the rank position 10 years funds return
 ````
 SELECT
     fund_symbol,
@@ -175,7 +176,8 @@ ORDER BY
 #### Performance Comparison for Bar Charts: 
 This query retrieves the fund return and category return for a set of funds.  This data can be used to compare the performance of individual funds against their category benchmarks.
 
-## --Example 5: Fund Ranking showing the rank position 5 years funds return
+#### Example 5: 
+Fund Ranking showing the rank position 5 years funds return
 ````
 SELECT
     fund_symbol,
