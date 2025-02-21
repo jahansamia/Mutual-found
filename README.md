@@ -1,4 +1,4 @@
-#                                                       Exploring Mutual Fund Performance and Trends with Azure SQL
+#                                                       Exploring-Mutual-Fund-Performance-and-Trends-with-Azure
 
 
 
@@ -7,12 +7,33 @@
 
 
 
+### Mutual-Fund-Data-Analysis: An Introduction :
+Mutual funds are a popular investment vehicle, pooling money from multiple investors to invest in a diversified portfolio of securities like stocks, bonds, or other assets.  Analyzing mutual fund data is crucial for investors, financial advisors, and researchers to make informed decisions.  This analysis can range from evaluating past performance to predicting future trends, assessing risk, and understanding the composition of a fund's holdings.
 
+### Objective:
+The Mutualn Funds data is to provide a snapshot of key metrics for various mutual funds. This allows for comparison and analysis of different funds based on factors like performance (year-to-date, 5-year, 10-year returns), risk (standard deviation, beta), expenses (expense projections), holdings (sector allocation, top holdings), and other relevant data points (yield, Morningstar rating, ESG scores).  Ultimately, the goal is to empower investors and analysts to evaluate funds and make informed investment decisions.This data processing and analysis involves ingesting, storing, exploring, analyzing, visualizing, and reporting on mutual fund data to facilitate informed investment decisions.  Azure SQL and Power BI are the key tools in this process.
 
-![LINK](https://web.azuresynapse.net/authoring/analyze/sqlscripts/mutualinternship?workspace=%2Fsubscriptions%2Fff80324e-ac84-42be-aad9-ba814df5df14%2FresourceGroups%2Fmutual-funds-rsc-g%2Fproviders%2FMicrosoft.Synapse%2Fworkspaces%2Fmutual)
+## Data-Processing-and-analysis-with-Visualization:
+downloaded the provided mutual fund data, cleaned it using Excel, and stored it in both a GitHub repository and an Azure Blob storage container.  Within Azure, I created a resource group containing a storage account, Data Factory, Databricks workspace, and Synapse Analytics workspace.  I then used these services to perform the following data pipeline:
 
+### Data Ingestion:
+The data from Azure Blob storage was ingested into the Synapse SQL pool.
 
-This README summarizes the SQL queries provided for analyzing mutual fund data. These queries are designed to extract and prepare data for visualization in a business intelligence tool like Power BI.  The queries cover several key aspects of fund analysis, including performance over time, sector allocation, and comparisons against category benchmarks.
+### Data Transformation:
+While the data cleaned in Excel but further transformations in Databricks i used Spark before loading into Synapse.
+
+### Data Analysis (Synapse SQL):
+Synapse SQL was used to query and analyze the mutual fund data. This included calculating performance metrics (returns, risk), comparing funds, analyzing sector allocation, and exploring ESG scores.
+
+### Data Visualization (Power BI):
+Power BI has been used to visualize the results of the Synapse SQL analysis. This would involve creating interactive dashboards and reports to present the key insights.
+
+## Data-Source : ![link](https://www.kaggle.com/)
+## Built-in Tools:
+* ![link](https://www.microsoft.com/en-us/power-platform/products/power-bi)
+* ![link](https://azure.microsoft.com)
+
+This summarizes the SQL queries provided for analyzing mutual fund data. These queries are designed to extract and prepare data for visualization in a business intelligence tool like Power BI.  The queries cover several key aspects of fund analysis, including performance over time, sector allocation, and comparisons against category benchmarks.
 
 Purpose:
 
