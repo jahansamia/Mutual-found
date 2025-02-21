@@ -34,11 +34,13 @@ Power BI has been used to visualize the results of the Synapse SQL analysis. Thi
 - [Azure](https://azure.microsoft.com/en-us/)
 - [Power BI](https://powerbi.microsoft.com/en-us/)
 
-This summarizes the SQL queries provided for analyzing mutual fund data. These queries are designed to extract and prepare data for visualization in a business intelligence tool like Power BI.  The queries cover several key aspects of fund analysis, including performance over time, sector allocation, and comparisons against category benchmarks.
 
-Purpose:
+## Power-BI Dashboard:
 
-The SQL queries in this repository are intended to be used with a mutual fund dataset (e.g., a table named mutual).  They provide a foundation for building an interactive dashboard that can help investors and analysts understand fund performance, risk, and composition.
+
+# Azure SQL Quries:
+
+This summarizes the SQL queries provided for analyzing mutual fund data, SQL queries in this repository are intended to be used with a mutual fund dataset.  They provide a foundation for building an interactive dashboard that can help investors and analysts understand fund performance, risk, and composition.
 
 Queries:
 -- Example 1: Year-to-Date Return vs. 52-Week High/Low Change Percentage:
