@@ -36,7 +36,20 @@ Power BI has been used to visualize the results of the Synapse SQL analysis. Thi
 
 
 ## Power-BI Dashboard:
+![image]()
 
+### Analysis:
+This Power BI dashboard provides a comprehensive analysis of mutual fund data, offering key insights into performance, risk, and composition. The analysis leverages a dataset containing various metrics for a selection of mutual funds, including returns (year-to-date, 5-year, 10-year, and annual), risk measures (standard deviation, beta), expenses, sector allocation, ESG scores, and other relevant fund characteristics.
+### Key Data Insights & Visualizations:
+####Fund Performance Analysis:
+Performance is evaluated across multiple timeframes. Line and column charts showcase historical trends, allowing for quick identification of top performers and periods of growth or decline. 
+### Specific visualizations include:
+* Sum of fund_return_5years by fund_return_2000 and fund_return_2001: A clustered column chart comparing the 5-year returns alongside returns from specific years (2000 and 2001). This helps visualize how funds performed during different market conditions.
+* Sum of fund_return_10years by fund_sector_healthcare: A pie chart breaking down 10-year returns by the healthcare sector allocation. This visualization helps understand the contribution of specific sectors to long-term returns.
+* Fund Return 2000 to Fund Return 2010: A line chart visualizing the yearly returns (2000-2010) for selected funds. This facilitates the analysis of performance consistency and trends over a decade
+
+### Summary of Findings
+This project uses Azure cloud services and Power BI to analyze mutual fund data, providing investors with a comprehensive and interactive dashboard. Raw data, likely cleaned in Excel, is stored in Azure Blob Storage and ingested into Azure Synapse Analytics via Azure Data Factory. Optional data transformations can be handled by Azure Databricks. Synapse SQL queries enable in-depth analysis of fund performance (returns, trends), risk (volatility), expenses, and holdings. Power BI visualizations, including line charts, column charts, and pie charts, present these insights clearly. The dashboard allows users to compare funds, filter by criteria, and ultimately make informed investment decisions. The combination of Azure's data processing power and Power BI's visualization capabilities creates a robust and scalable solution for mutual fund analysis.
 
 # Azure SQL Quries:
 
