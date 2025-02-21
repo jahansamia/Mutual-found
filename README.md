@@ -1,5 +1,13 @@
 #                                                       Exploring Mutual Fund Performance and Trends with Azure SQL
+
+
+
+
 ![image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.existbi.com%2Fblog%2Fadvantages-azure-synapse-analytics-sql-database%2F&psig=AOvVaw0MDzZybbRT3eLu_OpL0_O9&ust=1740187007842000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjGv7jM04sDFQAAAAAdAAAAABAE)
+
+
+
+
 
 ![LINK](https://web.azuresynapse.net/authoring/analyze/sqlscripts/mutualinternship?workspace=%2Fsubscriptions%2Fff80324e-ac84-42be-aad9-ba814df5df14%2FresourceGroups%2Fmutual-funds-rsc-g%2Fproviders%2FMicrosoft.Synapse%2Fworkspaces%2Fmutual)
 
