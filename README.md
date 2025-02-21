@@ -3,7 +3,7 @@
 
 
 
-![image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.existbi.com%2Fblog%2Fadvantages-azure-synapse-analytics-sql-database%2F&psig=AOvVaw0MDzZybbRT3eLu_OpL0_O9&ust=1740187007842000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjGv7jM04sDFQAAAAAdAAAAABAE)
+![image](https://github.com/jahansamia/Mutual-found/blob/0cbb377d45b9337380282bf41814f0385b6749a7/Azure-SQL-analysis/Azure-Synapse-Analytics-1-1-1536x864.png.webp)
 
 
 
