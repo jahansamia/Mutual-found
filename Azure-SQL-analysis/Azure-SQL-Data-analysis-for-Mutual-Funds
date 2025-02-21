@@ -2,7 +2,7 @@
 # Mutual-found
 https://web.azuresynapse.net/authoring/analyze/sqlscripts/mutualinternship?workspace=%2Fsubscriptions%2Fff80324e-ac84-42be-aad9-ba814df5df14%2FresourceGroups%2Fmutual-funds-rsc-g%2Fproviders%2FMicrosoft.Synapse%2Fworkspaces%2Fmutual
 
-![LINK](https://web.azuresynapse.net/authoring/analyze/sqlscripts/mutualinternship?workspace=%2Fsubscriptions%2Fff80324e-ac84-42be-aad9-ba814df5df14%2FresourceGroups%2Fmutual-funds-rsc-g%2Fproviders%2FMicrosoft.Synapse%2Fworkspaces%2Fmutual)
+[LINK](https://web.azuresynapse.net/authoring/analyze/sqlscripts/mutualinternship?workspace=%2Fsubscriptions%2Fff80324e-ac84-42be-aad9-ba814df5df14%2FresourceGroups%2Fmutual-funds-rsc-g%2Fproviders%2FMicrosoft.Synapse%2Fworkspaces%2Fmutual)
 
 
 This README summarizes the SQL queries provided for analyzing mutual fund data. These queries are designed to extract and prepare data for visualization in a business intelligence tool like Power BI.  The queries cover several key aspects of fund analysis, including performance over time, sector allocation, and comparisons against category benchmarks.
@@ -21,7 +21,7 @@ SELECT
 FROM
     mutual;
 ````
-![image](https://github.com/jahansamia/Mutual-found/blob/ad7196c0ee2c7d901a5d7195b37c080ccfc21fe1/Azure-SQL-analysis/52WEEKS.png)
+[image](https://github.com/jahansamia/Mutual-found/blob/ad7196c0ee2c7d901a5d7195b37c080ccfc21fe1/Azure-SQL-analysis/52WEEKS.png)
 
 Year-to-Date Return vs. 52-Week High/Low Change Percentage: This query retrieves the year-to-date return and the 52-week high/low change percentage for each fund.  This data can be used to explore the relationship between recent performance and price volatility.
 
