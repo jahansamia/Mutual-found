@@ -36,7 +36,7 @@ Power BI has been used to visualize the results of the Synapse SQL analysis. Thi
 
 
 ## Power-BI Dashboard:
-![image]()
+![image](https://github.com/jahansamia/Mutual-found/blob/4062a2878e24060e07f7a6cc18252e6aa10221af/Power-BI-Dashboard/Screenshot%20(1).png)
 
 ### Analysis:
 This Power BI dashboard provides a comprehensive analysis of mutual fund data, offering key insights into performance, risk, and composition. The analysis leverages a dataset containing various metrics for a selection of mutual funds, including returns (year-to-date, 5-year, 10-year, and annual), risk measures (standard deviation, beta), expenses, sector allocation, ESG scores, and other relevant fund characteristics.
